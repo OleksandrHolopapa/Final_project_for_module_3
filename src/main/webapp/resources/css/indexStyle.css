@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+                url('../images/greetings.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.greeting {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    width: 90%;
+}
+
+.continue-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.continue-btn:hover {
+    background-color: #45a049;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -2cm auto 20px auto;
+    width: 250px;
+}
+
+.history-toggle {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1.1em;
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.history-content-wrapper {
+    position: fixed;
+    bottom: 5cm;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.history-content {
+    display: none;
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px 5px 0 0;
+    color: #111;
+    line-height: 1.6;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    pointer-events: auto;
+}
+
+.history-content.visible {
+    display: block;
+}
