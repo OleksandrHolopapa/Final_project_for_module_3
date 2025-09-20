@@ -1,6 +1,6 @@
 {
   "message": "Traveler, you have reached a crossroads. In your backpack is a map that you bought from your guide. Would you like to use it?",
-  "rightAnswer": "Yes, it's not for nothing that I paid so much gold for her.",
-  "wrongAnswer": "No, I don't trust her for some reason. I regret buying it.",
+  "rightAnswer": "Yes, it's not for nothing that I paid so much gold for her",
+  "wrongAnswer": "No, I don't trust her for some reason. I regret buying it",
   "consequencesOfWrongChoices": "Half an hour later, the Edenia guards detained you. You were transferred to the sorting station. For two minutes, their healer examined you. In the evening, on the way from one garrison to another, you were beaten by a sorter. You died from numerous bodily injuries..."
 }

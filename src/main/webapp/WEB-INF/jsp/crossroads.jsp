@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mountains</title>
+    <title>Crossroads</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/indexStyle.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/mountainsStyle.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/crossroadsStyle.css">
 </head>
 <body>
 <div class="container">
@@ -12,7 +12,7 @@
 
     <div class="button-container">
         <button class="continue-btn"
-                onclick="window.location.href='${pageContext.request.contextPath}/next'">
+                onclick="window.location.href='${pageContext.request.contextPath}/forest'">
             ${rightAnswer}
         </button>
         <button class="continue-btn"
