@@ -2,16 +2,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Fail</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/failStyle.css">
+    <title>Success</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/successStyle.css">
 </head>
 <body>
 <div class="message-container">
     <div class="message">
-        ${param.answer}
+        ${message}
     </div>
     <div class="button-container">
-        <a href="${pageContext.request.contextPath}/mountains" class="action-btn try-again">Try Again</a>
+        <a href="${pageContext.request.contextPath}/mountains" class="action-btn continue-quest">Try Again</a>
         <a href="http://localhost:8080" class="action-btn finish-quest">Finish the quest</a>
     </div>
 </div>
