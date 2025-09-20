@@ -1,6 +1,6 @@
 The game "The Path Of The Traveler" is a fantasy survival game. You will have to go through different locations, making a 
 choice, literally, between life and death. The penultimate location will not give you a choice at all, but will determine your 
-participation. All characters and events are completely fictional. Any coincidences with real life are PSYOP. 😄
+participation. There may be two endings to the game. All characters and events are completely fictional. Any coincidences with real life are PSYOP. 😄
 
 LAUNCHING:
 
