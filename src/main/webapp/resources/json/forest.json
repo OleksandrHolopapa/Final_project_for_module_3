@@ -1,0 +1,6 @@
+{
+  "message": "Traveler, you are now in the forest. It is night. You heard voices ahead. They are the guards of Edenia. Your actions...",
+  "rightAnswer": "Hide in the bushes",
+  "wrongAnswer": "Quietly walk in the opposite direction from them",
+  "consequencesOfWrongChoices": "The branch broke. You were spotted. You started to run away. Warning shots rang out, mortally wounding you. The quest is over for you..."
+}
