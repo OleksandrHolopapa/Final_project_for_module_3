@@ -15,7 +15,7 @@
     
     <div class="history-content-wrapper">
         <div class="history-content" id="historyContent">
-            <%@ include file="/resources/txts/intro.txt" %>
+            <%@ include file="/resources/txt/intro.txt" %>
         </div>
     </div>
     

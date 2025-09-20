@@ -12,7 +12,7 @@
         
         <div class="button-container">
             <button class="continue-btn" 
-                    onclick="window.location.href='${pageContext.request.contextPath}/next-location'">
+                    onclick="window.location.href='${pageContext.request.contextPath}/crossroads'">
                 ${rightAnswer}
             </button>
             <button class="continue-btn" 
