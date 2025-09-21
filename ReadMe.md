@@ -16,7 +16,6 @@ BASIC CONFIGURATIONS:
 - Deploy at the server startup: Final_project_for_module_3:war exploded
 - Application context         : /
 
-BEFORE LAUNCH
-- Build 'Final_project_for_module_3:war exploded' artifact (I don't remember if it was at first)
 
-If there is no **Final_project_for_module_3:war exploded**, try running <span style="color:green">mvn clean install</span> in the maven console
+If there is no **Final_project_for_module_3:war exploded**, try running <span style="color:green">mvn clean install</span> in the maven console.
+In the **Deploy at the server startup** field, click **+**, select **Artifact...**, then select **Final_project_for_module_3:war exploded**.
