@@ -12,7 +12,7 @@ BASIC CONFIGURATIONS:
 - URL               : http://localhost:8080/
 - HTTP port         : 8080
 
-- DEPLOYMENT TAB:
+DEPLOYMENT TAB:
 - Deploy at the server startup: Final_project_for_module_3:war exploded
 - Application context         : /
 
