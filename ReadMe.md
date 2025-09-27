@@ -9,7 +9,7 @@ JAVA version: Openjdk-23 project SDK
 
 BASIC CONFIGURATIONS:
 - Application server: Tomcat 10.1.41
-- URL               : http://localhost:8080/
+- URL               : http://localhost:8080/start
 - HTTP port         : 8080
 
 DEPLOYMENT TAB:
