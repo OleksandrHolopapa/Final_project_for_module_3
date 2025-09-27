@@ -2,20 +2,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Beginning</title>
+    <title>Game</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/indexStyle.css">
 </head>
 <body>
-<h1 class="greeting">Well, here we are, Traveler! Are you ready to continue your journey alone?</h1>
+<h1 class="greeting">${message}</h1>
 
-<div class="button-container">
-    <a href="${pageContext.request.contextPath}/mountains" class="continue-btn">Continue the journey yourself</a>
-    <div class="history-toggle" onclick="toggleHistory()">A bit of history</div>
-</div>
+<form action="${pageContext.request.contextPath}/travel" method="GET" class="input-form">
+    <div class="input-container">
+        <input type="text" id="userInput" name="userInput" placeholder="Enter your name here..." class="text-input" required>
+    </div>
+    <div class="button-container">
+        <button type="submit" class="continue-btn">${button}</button>
+        <div class="history-toggle" type="button" onclick="toggleHistory()">A bit of history</div>
+    </div>
+</form>
 
 <div class="history-content-wrapper">
     <div class="history-content" id="historyContent">
-        <%@ include file="/resources/txt/intro.txt" %>
+        ${intro}
     </div>
 </div>
 
