@@ -15,8 +15,8 @@ import java.io.Serial;
 public class SuccessServlet extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
-    private final ServletService servletService = new ServletService();
-    private final SuccessServletService successServletService = new SuccessServletService();
+    private final transient ServletService servletService = new ServletService();
+    private final transient SuccessServletService successServletService = new SuccessServletService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -6,9 +6,13 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import java.io.Serial;
+
 @WebServlet("/start")
 public class GameStartServlet extends HttpServlet {
-    private final ServletService servletService = new ServletService();
+    @Serial
+    private static final long serialVersionUID = 1L;
+    private final transient ServletService servletService = new ServletService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws jakarta.servlet.ServletException, java.io.IOException {
         req.getSession().setAttribute("username", "JohnDoe");

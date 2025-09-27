@@ -14,7 +14,7 @@ import java.io.Serial;
 public class ForestServlet extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
-    private final ServletService servletService = new ServletService();
+    private final transient ServletService servletService = new ServletService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
