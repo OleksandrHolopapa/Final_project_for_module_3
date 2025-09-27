@@ -11,8 +11,8 @@
         ${param.answer}
     </div>
     <div class="button-container">
-        <a href="${pageContext.request.contextPath}/mountains" class="action-btn try-again">Try Again</a>
-        <a href="http://localhost:8080" class="action-btn finish-quest">Finish the quest</a>
+        <a href="${pageContext.request.contextPath}/travel?userInput=${username}" class="action-btn try-again">Try Again</a>
+        <a href="${pageContext.request.contextPath}/start" class="action-btn finish-quest">Finish the quest</a>
     </div>
 </div>
 </body>

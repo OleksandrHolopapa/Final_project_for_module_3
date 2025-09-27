@@ -1,6 +1,6 @@
 package com.javarush.servlets;
 
-import com.javarush.utils.ServletService;
+import com.javarush.services.ServletService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -14,10 +14,11 @@ import java.io.Serial;
 public class CrossroadsServlet extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
+    private final ServletService servletService = new ServletService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String jsonPath = getServletContext().getRealPath("/resources/json/crossroads.json");
-        ServletService.forward(jsonPath, "/WEB-INF/jsp/crossroads.jsp", req, resp);
+        servletService.setRequestAttributesFromJson(req, "/resources/json/crossroads.json", getServletContext());
+        req.getRequestDispatcher("/WEB-INF/jsp/crossroads.jsp").forward(req, resp);
     }
 }

@@ -28,9 +28,19 @@ body {
 }
 
 .greeting {
+    color: white;
     font-size: 2.5em;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    text-align: center;
+    margin-top: -5cm;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 1rem;
 }
 
 .button-container {

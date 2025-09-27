@@ -3,13 +3,11 @@
 <html>
 <head>
     <title>Forest</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/indexStyle.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/forestStyle.css">
 </head>
 <body>
+<h1 class="greeting">${username}${message}</h1>
 <div class="container">
-    <h1 class="greeting">${message}</h1>
-
     <div class="button-container">
         <button class="continue-btn"
                 onclick="window.location.href='${pageContext.request.contextPath}/river'">

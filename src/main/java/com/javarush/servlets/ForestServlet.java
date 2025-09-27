@@ -1,6 +1,6 @@
 package com.javarush.servlets;
 
-import com.javarush.utils.ServletService;
+import com.javarush.services.ServletService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -14,10 +14,11 @@ import java.io.Serial;
 public class ForestServlet extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
+    private final ServletService servletService = new ServletService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String jsonPath = getServletContext().getRealPath("/resources/json/forest.json");
-        ServletService.forward(jsonPath, "/WEB-INF/jsp/forest.jsp", req, resp);
+       servletService.setRequestAttributesFromJson(req, "/resources/json/forest.json", getServletContext());
+       req.getRequestDispatcher("/WEB-INF/jsp/forest.jsp").forward(req, resp);
     }
 }
