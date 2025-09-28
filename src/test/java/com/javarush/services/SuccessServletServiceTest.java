@@ -2,16 +2,18 @@ package com.javarush.services;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Random;
 
+@ExtendWith(MockitoExtension.class)
 class SuccessServletServiceTest {
 
     @Mock
@@ -30,7 +32,6 @@ class SuccessServletServiceTest {
 
     @BeforeEach
     void begin() {
-        MockitoAnnotations.openMocks(this);
         successServletService = new SuccessServletService(random);
     }
 
