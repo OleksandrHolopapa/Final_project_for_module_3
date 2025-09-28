@@ -15,7 +15,6 @@ public class GameStartServlet extends HttpServlet {
     private final transient ServletService servletService = ServletService.getInstance();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws jakarta.servlet.ServletException, java.io.IOException {
-        req.getSession().setAttribute("username", "JohnDoe");
         servletService.setRequestAttributesFromJson(req, "/resources/json/gameStart.json", getServletContext());
         req.getRequestDispatcher("index.jsp").forward(req, resp);
     }
