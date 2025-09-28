@@ -9,7 +9,15 @@ import java.util.Random;
 
 public class SuccessServletService {
     private final Logger logger = LoggerFactory.getLogger(SuccessServletService.class);
-    private final Random random = new Random();
+    private final Random random;
+
+    public SuccessServletService() {
+        this(new Random());
+    }
+
+    public SuccessServletService(Random random) {
+        this.random = random;
+    }
 
     public void testYourLuck(HttpServletRequest req, HttpServletResponse resp) {
         try {
