@@ -14,8 +14,24 @@ import java.util.Collections;
 import java.util.Map;
 
 public class ServletService {
+    private static volatile ServletService instance;
     private final ObjectMapper jsonMapper = new JsonMapper();
     private final Logger logger = LoggerFactory.getLogger(ServletService.class);
+
+    private ServletService() {}
+
+    public static ServletService getInstance() {
+        ServletService result = instance;
+        if (result != null) {
+            return result;
+        }
+        synchronized(ServletService.class) {
+            if (instance == null) {
+                instance = new ServletService();
+            }
+            return instance;
+        }
+    }
 
     private Map<String, String> getJsonData(ServletContext context, String jsonFilePath) {
         try {

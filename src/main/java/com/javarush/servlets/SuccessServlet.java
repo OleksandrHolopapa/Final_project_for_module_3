@@ -15,7 +15,7 @@ import java.io.Serial;
 public class SuccessServlet extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
-    private final transient ServletService servletService = new ServletService();
+    private final transient ServletService servletService = ServletService.getInstance();
     private final transient SuccessServletService successServletService = new SuccessServletService();
 
     @Override

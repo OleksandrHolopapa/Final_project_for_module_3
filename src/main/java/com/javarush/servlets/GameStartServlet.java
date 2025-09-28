@@ -12,7 +12,7 @@ import java.io.Serial;
 public class GameStartServlet extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
-    private final transient ServletService servletService = new ServletService();
+    private final transient ServletService servletService = ServletService.getInstance();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws jakarta.servlet.ServletException, java.io.IOException {
         req.getSession().setAttribute("username", "JohnDoe");
