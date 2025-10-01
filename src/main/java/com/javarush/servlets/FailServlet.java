@@ -13,9 +13,10 @@ import java.io.Serial;
 public class FailServlet extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
+    private final String FAIL_JSP_ADDRESS = "/WEB-INF/jsp/fail.jsp";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/jsp/fail.jsp").forward(req, resp);
+        req.getRequestDispatcher(FAIL_JSP_ADDRESS).forward(req, resp);
     }
 }

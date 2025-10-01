@@ -15,11 +15,14 @@ public class TravelServlet extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
     private final transient ServletService servletService = ServletService.getInstance();
+    private final String TRAVEL_JSP_ADDRESS = "/WEB-INF/jsp/travel.jsp";
+    private final String TRAVEL_JSON_ADDRESS = "/resources/json/travel.json";
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("userInput");
         req.getSession().setAttribute("username", username);
-        servletService.setRequestAttributesFromJson(req, "/resources/json/travel.json", getServletContext());
-        req.getRequestDispatcher("/WEB-INF/jsp/travel.jsp").forward(req, resp);
+        servletService.setRequestAttributesFromJson(req, TRAVEL_JSON_ADDRESS, getServletContext());
+        req.getRequestDispatcher(TRAVEL_JSP_ADDRESS).forward(req, resp);
     }
 }

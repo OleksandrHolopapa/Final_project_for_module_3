@@ -15,10 +15,12 @@ public class RiverServlet extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
     private final transient ServletService servletService = ServletService.getInstance();
+    private final String RIVER_JSP_ADDRESS = "/WEB-INF/jsp/river.jsp";
+    private final String RIVER_JSON_ADDRESS = "/resources/json/river.json";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        servletService.setRequestAttributesFromJson(req, "/resources/json/river.json", getServletContext());
-        req.getRequestDispatcher("/WEB-INF/jsp/river.jsp").forward(req, resp);
+        servletService.setRequestAttributesFromJson(req, RIVER_JSON_ADDRESS, getServletContext());
+        req.getRequestDispatcher(RIVER_JSP_ADDRESS).forward(req, resp);
     }
 }

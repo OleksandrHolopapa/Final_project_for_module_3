@@ -17,10 +17,11 @@ public class SuccessServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private final transient ServletService servletService = ServletService.getInstance();
     private final transient SuccessServletService successServletService = new SuccessServletService();
+    private final String SUCCESS_JSON_ADDRESS = "/resources/json/success.json";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        servletService.setRequestAttributesFromJson(req, "/resources/json/success.json", getServletContext());
+        servletService.setRequestAttributesFromJson(req, SUCCESS_JSON_ADDRESS, getServletContext());
         successServletService.testYourLuck(req, resp);
     }
 }

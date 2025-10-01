@@ -15,10 +15,12 @@ public class MountainsServlet extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
     private final transient ServletService servletService = ServletService.getInstance();
+    private final String MOUNTAINS_JSP_ADDRESS = "/WEB-INF/jsp/mountains.jsp";
+    private final String MOUNTAINS_JSON_ADDRESS = "/resources/json/mountains.json";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        servletService.setRequestAttributesFromJson(req, "/resources/json/mountains.json", getServletContext());
-        req.getRequestDispatcher("/WEB-INF/jsp/mountains.jsp").forward(req, resp);
+        servletService.setRequestAttributesFromJson(req, MOUNTAINS_JSON_ADDRESS, getServletContext());
+        req.getRequestDispatcher(MOUNTAINS_JSP_ADDRESS).forward(req, resp);
     }
 }

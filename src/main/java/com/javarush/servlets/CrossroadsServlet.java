@@ -15,10 +15,12 @@ public class CrossroadsServlet extends HttpServlet {
     @Serial
     private static final long serialVersionUID = 1L;
     private final transient ServletService servletService = ServletService.getInstance();
+    private final String CROSSROADS_JSP_ADDRESS = "/WEB-INF/jsp/crossroads.jsp";
+    private final String CROSSROADS_JSON_ADDRESS = "/resources/json/crossroads.json";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        servletService.setRequestAttributesFromJson(req, "/resources/json/crossroads.json", getServletContext());
-        req.getRequestDispatcher("/WEB-INF/jsp/crossroads.jsp").forward(req, resp);
+        servletService.setRequestAttributesFromJson(req, CROSSROADS_JSON_ADDRESS, getServletContext());
+        req.getRequestDispatcher(CROSSROADS_JSP_ADDRESS).forward(req, resp);
     }
 }
