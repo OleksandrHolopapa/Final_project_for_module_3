@@ -1,5 +1,6 @@
 package com.javarush.services;
 
+import com.javarush.exceptions.RequestRedirectionException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
@@ -10,6 +11,8 @@ import java.util.Random;
 public class SuccessServletService {
     private final Logger logger = LoggerFactory.getLogger(SuccessServletService.class);
     private final Random random;
+    private final String SUCCESS_JSP_ADDRESS = "/WEB-INF/jsp/success.jsp";
+    private final String FAIL_SERVLET_ADDRESS = "/fail";
 
     public SuccessServletService() {
         this(new Random());
@@ -23,14 +26,14 @@ public class SuccessServletService {
         try {
             if (isLuckOnYourSide()) {
                 logger.info("isLuckOnYourSide() returns true");
-                req.getRequestDispatcher("/WEB-INF/jsp/success.jsp").forward(req, resp);
+                req.getRequestDispatcher(SUCCESS_JSP_ADDRESS).forward(req, resp);
             } else {
                 logger.info("isLuckOnYourSide() returns false");
-                resp.sendRedirect(req.getContextPath() + "/fail?answer=" + req.getAttribute("failureMessage"));
+                resp.sendRedirect(req.getContextPath() + FAIL_SERVLET_ADDRESS +"?answer=" + req.getAttribute("failureMessage"));
             }
         } catch (Exception e) {
             logger.error("Error processing luck check request: {}", e.getMessage());
-            throw new RuntimeException(e);
+            throw new RequestRedirectionException(e.getMessage());
         }
     }
 
