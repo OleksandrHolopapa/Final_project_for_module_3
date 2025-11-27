@@ -1,0 +1,6 @@
+{
+  "message": "Edenia guards didn't notice you in the bushes... Half an hour later you reached the river. Freedomland on the other side. You noticed some more guards downstream near the boat. They were detaining another traveler",
+  "rightAnswer": "You'll wait to see what happens next",
+  "wrongAnswer": "While the guards are busy, you'll try to swim across the river",
+  "consequencesOfWrongChoices": "Cold water, fatigue and a fast current are not your friends. You drowned... Well, tomorrow someone will joke that he will drown in the eyes of his beloved just like that..."
+}
